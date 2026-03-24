@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1754cf",
+                        "background-light": "#000000",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display bg-black">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header: Search & Cart -->
+<header class="sticky top-0 z-50 bg-black/80 backdrop-blur-md px-4 py-3 border-b border-white/10">
+<div class="flex items-center gap-3">
+<div class="flex-1">
+<label class="relative flex items-center h-11 w-full">
+<span class="material-symbols-outlined absolute left-3 text-slate-400">search</span>
+<input class="w-full h-full bg-white/5 border border-white/10 rounded-xl pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-slate-500 text-white" placeholder="Tìm kiếm sản phẩm..." type="text"/>
+</label>
+</div>
+<button class="relative flex h-11 w-11 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">2</span>
+</button>
+</div>
+</header>
+<!-- Hero Banner -->
+<section class="px-4 py-4">
+<div class="relative h-[420px] w-full overflow-hidden rounded-2xl bg-slate-200 dark:bg-slate-800">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="High fashion model wearing luxury streetwear in minimalist setting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAuhjEdaBZ0TtdLXVMtXthj9ZfnViHhz91_HG4KA1teCnYtRPg6Jq_OAm926sqmIzIX_9aolPeJwwygWc7LhhTZhZNxqp2Ni8mCCGcVDfYPRiUy8a-x9DJuEGKv0QsBOANw-663hzF1415GkoxpMqzUuDaolqt2sU45Ynj99C30Ixrt-ODXoHOKExuKawBVswLBop-xsaoaozIOnNUhMhxD-dWVEoyL5RXTKLlba0IZ345TPF5XowOMTOvgKPphjF4C5fNOJT_pUbk9')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 flex flex-col gap-2">
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Bộ sưu tập mới</span>
+<h1 class="text-4xl font-extrabold text-white leading-tight">Elegance<br/>Redefined</h1>
+<button class="mt-4 w-fit rounded-full bg-white px-6 py-3 text-sm font-bold text-black transition-transform active:scale-95">Xem ngay</button>
+</div>
+</div>
+</section>
+<!-- Categories -->
+<section class="py-6">
+<div class="flex items-center justify-between px-4 mb-4">
+<h2 class="text-lg font-bold tracking-tight text-white">Danh mục</h2>
+<a class="text-xs font-semibold text-primary" href="#">Xem tất cả</a>
+</div>
+<div class="flex gap-4 overflow-x-auto px-4 no-scrollbar">
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/5 shadow-sm border border-white/10">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">checkroom</span>
+</div>
+<span class="text-xs font-medium text-slate-300">Áo</span>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/5 shadow-sm border border-white/10">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">apparel</span>
+</div>
+<span class="text-xs font-medium text-slate-300">Quần</span>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/5 shadow-sm border border-white/10">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">watch</span>
+</div>
+<span class="text-xs font-medium text-slate-300">Phụ kiện</span>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/5 shadow-sm border border-white/10">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">ice_skating</span>
+</div>
+<span class="text-xs font-medium text-slate-300">Giày</span>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/5 shadow-sm border border-white/10">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">shopping_bag</span>
+</div>
+<span class="text-xs font-medium text-slate-300">Túi xách</span>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="px-4 py-6">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-lg font-bold tracking-tight text-white">Sản phẩm nổi bật</h2>
+<span class="material-symbols-outlined text-slate-400">tune</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Product Card 1 -->
+<div class="group relative flex flex-col gap-3">
+<div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white/5 border border-white/5">
+<img class="h-full w-full object-cover" data-alt="Yellow designer dress on model" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_jW8XIewJjaK-TzNXaqlOM8HS92qJS7SK2-jtOTJWfWNeFND8JyGGjtfCUZjSN_hQBir8TFDUKYyzVvQ4WlRi7Saxi9wcfFN_LZeXXzsZy65kHYyPPF9CkTw8DanZXZI76Sj9rK_kydSMi9fZu51GBXefZtWtmeKeYSs_UcgsEru7y2V86KrHdo9NeP_t-cE9xE6rJlryl8_B0n6CGuRGaQaAHnjGpWCIWe1DwvtCWGzYM871XNc7c3ldhPIAJECyy_1Px1hRWiHU"/>
+<button class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+<button class="absolute bottom-2 right-2 flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-white shadow-lg">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col px-1">
+<h3 class="text-sm font-semibold truncate text-white">Váy lụa vàng cao cấp</h3>
+<p class="text-xs text-slate-500">Lux Collection</p>
+<p class="mt-1 text-sm font-bold text-white">1,250,000₫</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative flex flex-col gap-3">
+<div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white/5 border border-white/5">
+<img class="h-full w-full object-cover" data-alt="Black luxury coat on model" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOiLSOeTFhWk1Y1XwE5syM4FJMPv1jiWA5unA-3W5Io-tWjShRbwDsPArxBrXQE7jmJJSDTi6PuPLlZm8aV7YaqkYsZA5HO26VSsSoW9QTSInh-BBg7k3A8sAQAFdg-5G47qoq-rtmevAIwxu_rC_PLhAyN2r2zgT3qHpAILBEjwOrq2DzEPgb-7-90rhoMxWj-QvzBc0ES-6Ny2ExhBfeRqPeVo1VDJcQL7GFHb1WX1okUh-1UTDkiLdpl0_Q9mRPk8fhy90AAqaG"/>
+<button class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+<button class="absolute bottom-2 right-2 flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-white shadow-lg">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col px-1">
+<h3 class="text-sm font-semibold truncate text-white">Áo khoác Blazer đen</h3>
+<p class="text-xs text-slate-500">Business Wear</p>
+<p class="mt-1 text-sm font-bold text-white">2,400,000₫</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative flex flex-col gap-3">
+<div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white/5 border border-white/5">
+<img class="h-full w-full object-cover" data-alt="Minimalist street style outfit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKjiuHwTphmUp4S1QHeN39TlE3Njn_u6Go6h51ZUEKvmiWOv9OBVXDvO2TQa5KeF2MMtgyY4us7G6kUEcP0pCvwdw7XDPBXtzEq7NtMrih__oP3cWpyNj__Tih6xioo6WNVAaK6hwlTuaoMHgqOtmzmpgfhZ6_OhLLF5EiH7PcmtHWTFLu716IB3L6Thqf0MSFXHNcCwqrmy9UcHijGI44Zy3K3-l70c6kuoWgXKh8TdX_6136ADycogH_1uVErllceaw9NyQ1hArn"/>
+<button class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+<button class="absolute bottom-2 right-2 flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-white shadow-lg">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col px-1">
+<h3 class="text-sm font-semibold truncate text-white">Set bộ Linen xám</h3>
+<p class="text-xs text-slate-500">Summer Vibes</p>
+<p class="mt-1 text-sm font-bold text-white">890,000₫</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative flex flex-col gap-3">
+<div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white/5 border border-white/5">
+<img class="h-full w-full object-cover" data-alt="Red silk scarf accessory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApswQ0LTlVjbjNXCARZlegv5AWcbydOi6zkYzdvHcPnsazNBTkV-Dtd-qajHjEq36I4Itg-5ErYn3Cm8AJeloZWppQdUx2JQMlrzq5r4k7fUmsMlRA_higtxmHjXwmme30Y8nRXHzpcZKytqwIvrqlMKeJljL4mAxIUBSzed8cu4Mzry7wAbITuZPjY1rjxhx7WH9DCPpoBRpHSY1njfcgm66dIs4aCbBHwZfx8PoUsYRu5JbaqPP2e6czZO6CHRNy_mGV59FCyPWf"/>
+<button class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm">
+<span class="material-symbols-outlined text-sm text-red-500" style="font-variation-settings: 'FILL' 1">favorite</span>
+</button>
+<button class="absolute bottom-2 right-2 flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-white shadow-lg">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col px-1">
+<h3 class="text-sm font-semibold truncate text-white">Khăn quàng lụa đỏ</h3>
+<p class="text-xs text-slate-500">Accessories</p>
+<p class="mt-1 text-sm font-bold text-white">450,000₫</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Lookbook Section -->
+<section class="px-4 py-8">
+<div class="relative overflow-hidden rounded-2xl bg-slate-900 px-6 py-12 text-center">
+<div class="absolute inset-0 opacity-40">
+<img class="h-full w-full object-cover" data-alt="Breathtaking landscape background for lookbook" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgtevyIi5jIH1YH42vicaVJREcZuOJwbX5P2RxW7G9VtLsFNfELpaKue1kl6f4a9eKrgGFbu43OYFWXvu-pOxUbGcKC5JdFqkrh_cjOK3h-vS42kOFFKKFhN_w53eAGGxAMEBqHdVBk8zS38yVmT3nhO_sl-wKhGaatdsYN3dr2VP8kLo0FersTCVih5cF-8bSSkPtO6t9jSaSXYDVcFolfqq773XbVj2cLM-TgTh3nDHXulSN0YR5vnkpLszNdqdGEAuMrK04fYBM"/>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-4">
+<h2 class="text-2xl font-bold text-white">The Lookbook '24</h2>
+<p class="max-w-[280px] text-sm text-slate-200">Khám phá phong cách sống hiện đại qua những góc nhìn thời trang tinh tế nhất.</p>
+<button class="mt-2 rounded-full border border-white px-8 py-2 text-sm font-bold text-white transition-colors hover:bg-white hover:text-black">Khám phá ngay</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-black px-4 pt-12 pb-24 border-t border-white/10">
+<div class="flex flex-col gap-8">
+<div>
+<h2 class="text-xl font-bold tracking-tighter text-white">Fashion Store</h2>
+<p class="mt-2 text-sm text-slate-500 leading-relaxed">Mang đến phong cách thời trang hiện đại, tối giản và sang trọng cho mọi khách hàng.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-3">
+<h4 class="text-sm font-bold uppercase tracking-wider text-white">Hỗ trợ</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-500">
+<li>Chính sách đổi trả</li>
+<li>Vận chuyển</li>
+<li>Hướng dẫn chọn size</li>
+</ul>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-sm font-bold uppercase tracking-wider text-white">Liên hệ</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-500">
+<li>0123 456 789</li>
+<li>hello@fashionstore.vn</li>
+</ul>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-slate-300">
+<span class="material-symbols-outlined text-xl">share</span>
+</div>
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-slate-300">
+<span class="material-symbols-outlined text-xl">public</span>
+</div>
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-slate-300">
+<span class="material-symbols-outlined text-xl">camera</span>
+</div>
+</div>
+<div class="text-center text-xs text-slate-400 py-4">
+                    © 2024 Fashion Store. All rights reserved.
+                </div>
+</div>
+</footer>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-between border-t border-white/10 bg-black/95 backdrop-blur-md px-6 pb-6 pt-3">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">home</span>
+<span class="text-[10px] font-bold">Trang chủ</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">category</span>
+<span class="text-[10px] font-medium">Danh mục</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] font-medium">Yêu thích</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Tài khoản</span>
+</a>
+</nav>
+</div>
+</body></html>
